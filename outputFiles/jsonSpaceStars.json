@@ -1,0 +1,22 @@
+[
+  {
+    "_color": "Yellow",
+    "_weight": 1.0,
+    "_spectralClass": "G",
+    "_old": 12345,
+    "_spaceObject": [],
+    "_planets": [],
+    "_name": "Sun",
+    "_temperature": 5780
+  },
+  {
+    "_color": "White",
+    "_weight": 10.0,
+    "_spectralClass": "A",
+    "_old": 123454,
+    "_spaceObject": [],
+    "_planets": [],
+    "_name": "Sirius",
+    "_temperature": 9940
+  }
+]

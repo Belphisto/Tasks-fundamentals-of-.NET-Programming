@@ -1,0 +1,298 @@
+using System;
+using System.Collections;
+using static System.Console;
+using System.Xml;
+using System.Xml.Linq;
+using System.Xml.Serialization;
+
+namespace Space
+{
+
+    public class MyCollection<T> : ICollection<T> where T : IPlanet 
+    {
+        private List<T> innerPlanet;
+        private List<SpaceObject> innerSpace;
+        private List<StarSystem> innerSystems;
+        private List<Constellation> innerConstellations;
+        public MyCollection()
+        {innerPlanet = new List<T>();
+          innerSpace = new List<SpaceObject>();
+          innerSystems = new List<StarSystem>();
+          innerConstellations = new List<Constellation>();
+        }
+        public MyCollection(List<T> planets, List<SpaceObject> objs, List<StarSystem> starSystems,List<Constellation> constellations)
+        { innerPlanet = planets;
+          innerSpace = objs;
+          innerSystems = starSystems;
+          innerConstellations = constellations;
+        }
+        public int Count => innerConstellations.Count;
+        public bool IsReadOnly => false;
+        public T this[int index]
+        {
+            get {return (T)innerPlanet[index];}
+            set{innerPlanet[index] = value;}
+        }
+        public void Add(T item)
+        {
+            if (!Contains(item)) {innerPlanet.Add(item);}
+            else {Console.WriteLine("This object is already in the collection");}
+
+        }
+        public void Add(Constellation item)
+        {
+            if (!Contains(item)) {innerConstellations.Add(item);}
+            else {Console.WriteLine("This object is already in the collection");}
+        }
+        public void Add(SpaceObject item)
+        {
+            if (!Contains(item)) {innerSpace.Add(item);}
+            else {Console.WriteLine("This object is already in the collection");}
+        }
+        public void Add(StarSystem item)
+        {
+            if (!Contains(item)) {innerSystems.Add(item);}
+            else {Console.WriteLine("This object is already in the collection");}
+        }
+
+        public void Clear() { innerPlanet.Clear(); innerConstellations.Clear(); innerSystems.Clear();}
+
+        public bool Contains(T item)
+        {
+           bool found = false;
+           foreach( T temp in innerPlanet){if (temp.Equals(item)) found = true;}
+           return found;
+        }
+        public bool Contains(Constellation item)
+        {
+           bool found = false;
+           foreach( Constellation temp in innerConstellations){if (temp.Equals(item)) found = true;}
+           return found;
+        }
+        public bool Contains(SpaceObject item)
+        {
+           bool found = false;
+           foreach( SpaceObject temp in innerSpace){if (temp.Equals(item)) found = true;}
+           return found;
+        }
+        public bool Contains(StarSystem item)
+        {
+           bool found = false;
+           foreach( StarSystem temp in innerSystems){if (temp.Equals(item)) found = true;}
+           return found;
+        }
+
+        public void CopyTo(T[] array, int arrayIndex)
+        {
+            if (array == null)  throw new ArgumentNullException("The array cannot be null.");
+            if (arrayIndex < 0) throw new ArgumentOutOfRangeException("The starting array index cannot be negative.");
+            if (Count > array.Length - arrayIndex) throw new ArgumentException("The destination array has fewer elements than the collection.");
+           for (int i = 0; i < innerPlanet.Count; i++) {array[i + arrayIndex] = innerPlanet[i];}
+        }
+
+        public bool Remove(T item)
+        {
+            bool result = false;
+            for (int i=0; i<innerPlanet.Count; i++)
+            {
+                T curT = (T)innerPlanet[i];
+                if (item.GetHashCode() == curT.GetHashCode())
+                {
+                    innerPlanet.Remove(innerPlanet[i]);
+                    result = true;
+                    break;
+                }
+            }
+            return result;
+        }
+        public bool Remove(Constellation item)
+        {
+            bool result = false;
+            for (int i=0; i<innerConstellations.Count; i++)
+            {
+                Constellation curT = (Constellation)innerConstellations[i];
+                if (item.GetHashCode() == curT.GetHashCode())
+                {
+                    innerConstellations.Remove(innerConstellations[i]);
+                    result = true;
+                    break;
+                }
+            }
+            return result;
+        }
+        public bool Remove(SpaceObject item)
+        {
+            bool result = false;
+            for (int i=0; i<innerSpace.Count; i++)
+            {
+                SpaceObject curT = (SpaceObject)innerSpace[i];
+                if (item.GetHashCode() == curT.GetHashCode())
+                {
+                    innerSpace.Remove(innerSpace[i]);
+                    result = true;
+                    break;
+                }
+            }
+            return result;
+        }
+        public bool Remove(StarSystem item)
+        {
+            bool result = false;
+            for (int i=0; i<innerSystems.Count; i++)
+            {
+                StarSystem curT = (StarSystem)innerSystems[i];
+                if (item.GetHashCode() == curT.GetHashCode())
+                {
+                    innerSystems.Remove(innerSystems[i]);
+                    result = true;
+                    break;
+                }
+            }
+            return result;
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return innerPlanet.GetEnumerator();
+        }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return innerPlanet.GetEnumerator();
+        }
+
+        public IEnumerator<Constellation> GetEnumerator2()
+        {
+            return innerConstellations.GetEnumerator();
+        }
+        public IEnumerator<StarSystem> GetEnumerator3()
+        {
+            return innerSystems.GetEnumerator();
+        }
+
+        public async Task AsyncSort(Func<IPlanet, IPlanet, bool> func)
+        {
+            await Task.Delay(2000);
+            Log.WriteLog("Start AsyncSort");
+            await Task.Run(() => SortByField(func));
+            Log.WriteLog("End AsyncSort");
+        }
+
+        public void SortByField(Func<IPlanet, IPlanet, bool> func)
+        {
+            Log.WriteLog("Sorted Start");
+            List<T> temp = new List<T>();
+            for (int i=0; i<innerPlanet.Count; i++)
+            {
+                for(int j=i+1; j<innerPlanet.Count; j++)
+                {
+                    if(func(innerPlanet[i], innerPlanet[j]))
+                    {
+                        (innerPlanet[i], innerPlanet[j]) = (innerPlanet[j], innerPlanet[i]);
+                    }
+                }
+                Log.WriteLog($"Element {i} sorted");
+            }
+             Log.WriteLog("Sorted End");
+        }
+        public void SortByField(Func<Constellation, Constellation, bool> func)
+        {
+
+            List<SpaceObject> temp = new List<SpaceObject>();
+            for (int i=0; i<innerConstellations.Count; i++)
+            {
+                for(int j=i+1; j<innerConstellations.Count; j++)
+                {
+                    if(func(innerConstellations[i], innerConstellations[j]))
+                    {
+                        (innerConstellations[i], innerConstellations[j]) = (innerConstellations[j], innerConstellations[i]);
+                    }
+                }
+            }
+        }
+
+        public void Foreach(Action<T> action)
+        {
+            if (action == null) WriteLine("Action not set");
+            else
+            {
+                foreach(var temp in innerPlanet)
+                {
+                    action.Invoke(temp);
+                }
+            }
+            
+        }
+        public void Foreach(Action<Constellation> action)
+        {
+            if (action == null) WriteLine("Action not set");
+            else
+            {
+                foreach(var temp in innerConstellations)
+                {
+                    action.Invoke(temp);
+                }
+            }
+            
+        }
+        public void Foreach(Action<StarSystem> action)
+        {
+            if (action == null) WriteLine("Action not set");
+            else
+            {
+                foreach(var temp in innerSystems)
+                {
+                    action.Invoke(temp);
+                }
+            }
+            
+        }
+        public void Foreach(Action<SpaceObject> action)
+        {
+            if (action == null) WriteLine("Action not set");
+            else
+            {
+                foreach(var temp in innerSpace)
+                {
+                    action.Invoke(temp);
+                }
+            }
+            
+        }
+        
+        public void Serializ(string folder)
+        {
+            string fileName = $"{folder}/jsonPlanets.json";
+            JSONSerializator jSON =new JSONSerializator();
+            jSON.Serialize<T>(innerPlanet, fileName);
+            Log.WriteLog($"{innerPlanet.Count} Planets serialized");
+
+            fileName = $"{folder}/jsonSpaceObjects.json";
+            jSON.Serialize2<SpaceObject>(innerSpace, fileName);
+            Log.WriteLog($"{innerSpace.Count} SpaceObjects serialized");
+
+            fileName = $"{folder}/jsonSpaceStars.json";
+            jSON.Serialize<StarSystem>(innerSystems, fileName);
+            Log.WriteLog($"{innerSystems.Count} Stars serialized");
+
+            fileName = $"{folder}/jsonConstellations.json";
+            jSON.Serialize<Constellation>(innerConstellations, fileName);
+            Log.WriteLog($"{innerConstellations.Count} Constellations serialized");
+        }
+
+        public static MyCollection<Planet> Deserialize(string folder)
+        {
+            JSONSerializator jSON =new JSONSerializator();
+            List<Planet> planets = jSON.Deserialize<Planet>($"{folder}/jsonPlanets1.json");
+            Log.WriteLog($"{planets.Count} Planets deserialized");
+            List<SpaceObject> Space = jSON.Deserialize2<SpaceObject>($"{folder}/jsonSpaceObjects.json");
+            Log.WriteLog($"{Space.Count} SpaceObjects deserialized");
+            List<StarSystem> Systems = jSON.Deserialize<StarSystem>($"{folder}/jsonSpaceStars.json");
+            Log.WriteLog($"{Systems.Count} Stars deserialized");
+            List<Constellation> Constellations = jSON.Deserialize<Constellation>($"{folder}/jsonConstellations.json");
+            Log.WriteLog($"{Constellations.Count} Constellations deserialized");
+            return new MyCollection<Planet>(planets, Space, Systems, Constellations);
+        }
+    }
+
+
+}

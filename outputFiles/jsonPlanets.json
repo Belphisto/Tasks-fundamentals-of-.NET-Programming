@@ -1,0 +1,37 @@
+[
+  {
+    "_coordinate": [
+      11,
+      11,
+      11
+    ],
+    "_name": "Planet",
+    "_weight": 231.0,
+    "_diameter": 12.0,
+    "_period": 123.0,
+    "_valuableResource": "A",
+    "_mainStar": null
+  },
+  {
+    "_coordinate": [
+      15,
+      12,
+      11
+    ],
+    "_element": "water",
+    "_flora": [
+      "water Flower"
+    ],
+    "_fauna": [
+      "fur seal",
+      "killer whale"
+    ],
+    "_weather": "storm",
+    "_name": "Elemental",
+    "_weight": 340.0,
+    "_diameter": 23.0,
+    "_period": 50.0,
+    "_valuableResource": "D",
+    "_mainStar": null
+  }
+]

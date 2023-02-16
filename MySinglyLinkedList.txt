@@ -1,0 +1,177 @@
+using System;
+using static System.Console;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace Space
+{
+    public class Node<T> 
+    {
+        public Node(T data) //Создание нового экземпляра однонаправленного списка
+        {
+            Data = data;
+        }
+        public T Data {get; set; } //хранимые данные
+        public Node<T> Next {get; set; } //ссылка на следующий элемент списка
+    }
+
+    internal class SinglyLinkedList<T> : IEnumerable<T> where T : Planet
+    {
+        Node<T> Head; //Первый элемент
+        Node<T> Tail; //Последний элемент
+        int Count; //количество элементов в списке
+
+        //Добавление элемента в список
+        public  void Add(T data)
+        {
+            //передача данных в новый объект списка
+            Node<T> Node = new Node<T>(data);
+            if (Head == null) Head = Node; //если список пуст - Head и Tail указывают на один элемент
+            else Tail.Next = Node; //иначе - Tail.Next хранит ссылку на новый узел
+            Tail = Node; //Tail - ссылается на новый узел (или на один элемент с Head)
+            Count++;
+        }
+
+        public void AddBySortingByField(T data, Func<Planet, Planet, bool> func)
+        {
+            Node<T> Node = new Node<T>(data);
+            var field = data;
+            if (Head == null || func(Head.Data, field)) {Node.Next = Head; Head = Node; Count++;}
+            else
+            {
+                Node<T> current = Head;
+                while (current.Next != null && !func(current.Next.Data, field))
+                {
+                    current = current.Next;
+                }
+                Node.Next = current.Next;
+                current.Next = Node;
+                Count++;
+            }
+        }
+
+        public void FindByField(Func<Planet, string, bool> func, string str)
+        {
+            Node<T> current = Head;
+            int count = 0;
+            while (current != null)
+            {
+                if (func(current.Data, str)) {Console.WriteLine(current.Data); count++;}
+                current = current.Next;
+            }
+            if (count == 0) Console.WriteLine("По вашему запросу ничего не найдено!");
+            else Console.WriteLine($"По вашему запросу найдено {count} шт.");
+        }
+
+        public void Foreach(Action<Node<T>> action)
+        {
+            if (action == null) {return; }
+            Node<T> current = Head;
+            while (current != null)
+            {
+                var element = current;
+                action.Invoke(element);
+                current = current.Next;
+            }
+        }
+
+        internal void CompareByField (T data1, T data2, Func<Planet, Planet, int> func, string str)
+        {
+            Node<T> current1 = Head;
+            Node<T> current2 = Head;
+            while(current1 != null)
+            {
+                if (current1.Data.Equals(data1))
+                {
+                    while(current2 != null)
+                    {
+                        if (current2.Data.Equals(data2))
+                        {
+                            if (func(current1.Data, current2.Data) > 0)
+                            {
+                                WriteLine($"{current1.Data._name} more than {current2.Data._name}by field: {str}");
+                            }
+                            else if (func(current1.Data, current2.Data) == 0)
+                            {
+                                WriteLine($"{current1.Data._name} equaels {current2.Data._name} by field: {str}");
+                            }
+                            else 
+                            {
+                                WriteLine($"{current1.Data._name} less {current2.Data._name} by field: {str}");
+                            }
+                        }
+                        current2 = current2.Next;
+                    }
+                }
+                current1 = current1.Next;
+            }
+        }
+
+        //Удаление элемента из списка
+        public bool Remove(T data)
+        {
+            Node<T> current = Head; //переменная текущий указывает на первый элемент
+            Node<T> previous = null; //переменная предыдущий ни на что не указывает
+            while(current != null) //поиск элемента в списке путем перебора всех элементов
+            {
+                if (current.Data.Equals(data))
+                {
+                    //если узел не в начале
+                    if (previous !=null)
+                    {
+                        //previous ссылается не на current, а на current.Next
+                        previous.Next = current.Next;
+                        // Если current.Next не установлен, значит узел последний
+                        if (current.Next == null) Tail = previous;
+                    }
+                    else //если удаялется первый элемент.
+                    {
+                        //переустановка значения Head
+                        Head = Head.Next;
+                        // если после удаления список пуст, сбрасываем tail
+                        if (Head == null) Tail = null;
+                    }
+                    Count --;
+                    Console.WriteLine("Элемент удален!");
+                    return true;
+                }
+                previous = current;
+                current = current.Next;
+            }
+            return false;
+        }
+
+        public bool RemoveFist()
+        {
+            Node<T> current = Head; //переменная текущий указывает на первый элемент
+            //Node<T> previous = null;
+            if (current !=null)
+            {
+                Head = Head.Next;
+                if (Head == null) Tail = null;
+                Count --;
+                Console.WriteLine("Элемент удален!");
+                return true;
+            }
+            else {Console.WriteLine("Список пуст!"); return false;}
+        }
+
+        public int GetCount {get {return Count;}}
+
+        //Реализация интерфейса IEnumerable<T> для перебора foreach
+        IEnumerator<T> IEnumerable<T>.GetEnumerator()
+        {
+            Node<T> current = Head;
+            while (current != null)
+            {
+                yield return current.Data; //оператор yield для перебора набора значений
+                current = current.Next;
+            }
+        }
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return ((IEnumerable)this).GetEnumerator();
+        }
+
+    }
+}

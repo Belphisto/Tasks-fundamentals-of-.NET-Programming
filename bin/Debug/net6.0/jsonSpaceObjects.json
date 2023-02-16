@@ -1,0 +1,1 @@
+{"$type":"System.Collections.Generic.List`1[[Space.SpaceObject, DotNetTask2022]], System.Private.CoreLib","$values":[{"$type":"Space.Spaceship, DotNetTask2022","_type":"type SpaceShip","_name":"Edens Zero"},{"$type":"Space.Spaceship, DotNetTask2022","_type":"type SpaceShip","_name":"Fairy"},{"$type":"Space.Satellite, DotNetTask2022","_type":"type Satellite1","_name":"A3r23"}]}

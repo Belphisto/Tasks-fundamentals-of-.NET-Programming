@@ -1,0 +1,143 @@
+LogInfo: 21.11.2022 / 16:09:20 / Program started
+LogInfo: 21.11.2022 / 16:09:20 / The star Sun has been successfully attached to the Big Dog constellation!
+LogInfo: 21.11.2022 / 16:09:20 / The star Sirius has been successfully attached to the Big Dog constellation!
+LogInfo: 21.11.2022 / 16:09:20 / Big Dog add to collection
+LogInfo: 21.11.2022 / 16:09:20 / Sun add to collection
+LogInfo: 21.11.2022 / 16:09:20 / Sirius add to collection
+LogInfo: 21.11.2022 / 16:09:20 / Planet add to collection
+LogInfo: 21.11.2022 / 16:09:20 / Elemental add to collection
+LogInfo: 21.11.2022 / 16:09:20 / Edens Zero add to collection
+LogInfo: 21.11.2022 / 16:09:20 / Fairy add to collection
+LogInfo: 21.11.2022 / 16:09:20 / A3r23 add to collection
+ LogWrong: 21.11.2022 / 16:09:20 / Could not find a part of the path 'E:\Лена документы\CODE\1_DotNetTask2022\DotNetTask2022\outputFiles1\jsonPlanets.json'.
+ LogWrong: 21.11.2022 / 16:09:20 / Could not find file 'E:\Лена документы\CODE\1_DotNetTask2022\DotNetTask2022\outputFiles\jsonPlanets1.json'.
+ LogWrong: 21.11.2022 / 16:09:20 / A planet cannot have a negative weight. / invalid value: -231
+LogInfo: 21.11.2022 / 16:09:21 / Program ended
+
+LogInfo: 11/22/2022 / 10:11:09 AM / Program started
+LogInfo: 11/22/2022 / 10:11:09 AM / The star Sun has been successfully attached to the Big Dog constellation!
+LogInfo: 11/22/2022 / 10:11:09 AM / The star Sirius has been successfully attached to the Big Dog constellation!
+LogInfo: 11/22/2022 / 10:11:09 AM / Big Dog add to collection
+LogInfo: 11/22/2022 / 10:11:09 AM / Sun add to collection
+LogInfo: 11/22/2022 / 10:11:09 AM / Sirius add to collection
+LogInfo: 11/22/2022 / 10:11:09 AM / Planet add to collection
+LogInfo: 11/22/2022 / 10:11:09 AM / Elemental add to collection
+LogInfo: 11/22/2022 / 10:11:09 AM / Edens Zero add to collection
+LogInfo: 11/22/2022 / 10:11:09 AM / Fairy add to collection
+LogInfo: 11/22/2022 / 10:11:09 AM / A3r23 add to collection
+ LogWrong: 11/22/2022 / 10:11:10 AM / Could not find a part of the path 'D:\Downloads\DotNetTask2022 (1)\DotNetTask2022\outputFiles1\jsonPlanets.json'.
+ LogWrong: 11/22/2022 / 10:11:10 AM / Could not find file 'D:\Downloads\DotNetTask2022 (1)\DotNetTask2022\outputFiles\jsonPlanets1.json'.
+ LogWrong: 11/22/2022 / 10:11:10 AM / A planet cannot have a negative weight. / invalid value: -231
+LogInfo: 11/22/2022 / 10:31:02 AM / Program ended
+
+LogInfo: 11/22/2022 / 10:31:14 AM / Program started
+LogInfo: 11/22/2022 / 10:31:14 AM / The star Sun has been successfully attached to the Big Dog constellation!
+LogInfo: 11/22/2022 / 10:31:14 AM / The star Sirius has been successfully attached to the Big Dog constellation!
+LogInfo: 11/22/2022 / 10:31:14 AM / Big Dog add to collection
+LogInfo: 11/22/2022 / 10:31:14 AM / Sun add to collection
+LogInfo: 11/22/2022 / 10:31:14 AM / Sirius add to collection
+LogInfo: 11/22/2022 / 10:31:14 AM / Planet add to collection
+LogInfo: 11/22/2022 / 10:31:14 AM / Elemental add to collection
+LogInfo: 11/22/2022 / 10:31:14 AM / Edens Zero add to collection
+LogInfo: 11/22/2022 / 10:31:14 AM / Fairy add to collection
+LogInfo: 11/22/2022 / 10:31:14 AM / A3r23 add to collection
+ LogWrong: 11/22/2022 / 10:31:14 AM / Could not find a part of the path 'D:\Downloads\DotNetTask2022 (1)\DotNetTask2022\outputFiles1\jsonPlanets.json'.
+ LogWrong: 11/22/2022 / 10:31:14 AM / Could not find file 'D:\Downloads\DotNetTask2022 (1)\DotNetTask2022\outputFiles\jsonPlanets1.json'.
+ LogWrong: 11/22/2022 / 10:31:14 AM / A planet cannot have a negative weight. / invalid value: -231
+LogInfo: 11/22/2022 / 10:31:14 AM / Sorted Start
+LogInfo: 11/22/2022 / 10:31:14 AM / Sorted End
+LogInfo: 11/22/2022 / 10:31:25 AM / Program ended
+
+
+LogInfo: 12/6/2022 / 8:12:30 AM / Program started WITHOUT AWAIT
+LogInfo: 12/6/2022 / 8:12:30 AM /  SpaceshipEdens Zero add to collection
+LogInfo: 12/6/2022 / 8:12:30 AM /  SpaceshipTail add to collection
+LogInfo: 12/6/2022 / 8:12:30 AM /  SpaceshipFairy add to collection
+LogInfo: 12/6/2022 / 8:12:30 AM /  SatelliteA3r23 add to collection
+LogInfo: 12/6/2022 / 8:12:30 AM /  SatelliteR2r23 add to collection
+LogInfo: 12/6/2022 / 8:12:30 AM /  SatelliteB3r23 add to collection
+LogInfo: 12/6/2022 / 8:12:30 AM /  Planet Planet add to collection
+LogInfo: 12/6/2022 / 8:12:30 AM /  Planet A add to collection
+LogInfo: 12/6/2022 / 8:12:30 AM /  Planet Planet2 add to collection
+LogInfo: 12/6/2022 / 8:12:30 AM /  Planet Elemental add to collection
+LogInfo: 12/6/2022 / 8:12:30 AM /  Planet L add to collection
+LogInfo: 12/6/2022 / 8:12:30 AM /  Planet C add to collection
+LogInfo: 12/6/2022 / 8:12:30 AM /  Planet Elemental2 add to collection
+LogInfo: 12/6/2022 / 8:12:30 AM /  Planet D add to collection
+LogInfo: 12/6/2022 / 8:12:30 AM /  Planet A1 add to collection
+LogInfo: 12/6/2022 / 8:12:30 AM /  Planet N add to collection
+LogInfo: 12/6/2022 / 8:12:30 AM /  Planet 1N add to collection
+LogInfo: 12/6/2022 / 8:12:30 AM / Что-то тут происходит
+LogInfo: 12/6/2022 / 8:12:30 AM / Что-то тут происходит2
+LogInfo: 12/6/2022 / 8:12:33 AM / Start AsyncSort SpaceObject
+LogInfo: 12/6/2022 / 8:12:33 AM / Sort SpaceObject by Field START
+LogInfo: 12/6/2022 / 8:12:33 AM / SpaceObject 0 sorted
+LogInfo: 12/6/2022 / 8:12:33 AM / SpaceObject 1 sorted
+LogInfo: 12/6/2022 / 8:12:34 AM / SpaceObject 2 sorted
+LogInfo: 12/6/2022 / 8:12:35 AM / SpaceObject 3 sorted
+LogInfo: 12/6/2022 / 8:12:35 AM / Start AsyncSort Planet
+LogInfo: 12/6/2022 / 8:12:35 AM / Sort Planet by Field START
+LogInfo: 12/6/2022 / 8:12:35 AM / Planet 0 sorted
+LogInfo: 12/6/2022 / 8:12:35 AM / SpaceObject 4 sorted
+LogInfo: 12/6/2022 / 8:12:36 AM / SpaceObject 5 sorted
+LogInfo: 12/6/2022 / 8:12:36 AM / Planet 1 sorted
+LogInfo: 12/6/2022 / 8:12:36 AM / Sort SpaceObject by Field END
+LogInfo: 12/6/2022 / 8:12:36 AM / End AsyncSort SpaceObject
+LogInfo: 12/6/2022 / 8:12:37 AM / Planet 2 sorted
+LogInfo: 12/6/2022 / 8:12:38 AM / Planet 3 sorted
+LogInfo: 12/6/2022 / 8:12:39 AM / Planet 4 sorted
+LogInfo: 12/6/2022 / 8:12:40 AM / Planet 5 sorted
+LogInfo: 12/6/2022 / 8:12:41 AM / Planet 6 sorted
+LogInfo: 12/6/2022 / 8:12:42 AM / Planet 7 sorted
+LogInfo: 12/6/2022 / 8:12:43 AM / Planet 8 sorted
+LogInfo: 12/6/2022 / 8:12:44 AM / Planet 9 sorted
+LogInfo: 12/6/2022 / 8:12:45 AM / Planet 10 sorted
+LogInfo: 12/6/2022 / 8:12:46 AM / Sort Planet by Field END
+LogInfo: 12/6/2022 / 8:12:46 AM / End AsyncSort Planet
+LogInfo: 12/6/2022 / 8:12:48 AM / Program ended
+LogInfo: 12/6/2022 / 9:55:38 AM / Program started WITHOUT AWAIT
+LogInfo: 12/6/2022 / 9:55:38 AM /  SpaceshipEdens Zero add to collection
+LogInfo: 12/6/2022 / 9:55:38 AM /  SpaceshipTail add to collection
+LogInfo: 12/6/2022 / 9:55:38 AM /  SpaceshipFairy add to collection
+LogInfo: 12/6/2022 / 9:55:38 AM /  SatelliteA3r23 add to collection
+LogInfo: 12/6/2022 / 9:55:38 AM /  SatelliteR2r23 add to collection
+LogInfo: 12/6/2022 / 9:55:38 AM /  SatelliteB3r23 add to collection
+LogInfo: 12/6/2022 / 9:55:38 AM /  Planet Planet add to collection
+LogInfo: 12/6/2022 / 9:55:38 AM /  Planet A add to collection
+LogInfo: 12/6/2022 / 9:55:38 AM /  Planet Planet2 add to collection
+LogInfo: 12/6/2022 / 9:55:38 AM /  Planet Elemental add to collection
+LogInfo: 12/6/2022 / 9:55:38 AM /  Planet L add to collection
+LogInfo: 12/6/2022 / 9:55:38 AM /  Planet C add to collection
+LogInfo: 12/6/2022 / 9:55:38 AM /  Planet Elemental2 add to collection
+LogInfo: 12/6/2022 / 9:55:38 AM /  Planet D add to collection
+LogInfo: 12/6/2022 / 9:55:38 AM /  Planet A1 add to collection
+LogInfo: 12/6/2022 / 9:55:38 AM /  Planet N add to collection
+LogInfo: 12/6/2022 / 9:55:38 AM /  Planet 1N add to collection
+LogInfo: 12/6/2022 / 9:55:38 AM / Что-то тут происходит
+LogInfo: 12/6/2022 / 9:55:38 AM / Что-то тут происходит2
+LogInfo: 12/6/2022 / 9:55:41 AM / Start AsyncSort SpaceObject
+LogInfo: 12/6/2022 / 9:55:41 AM / Sort SpaceObject by Field START
+LogInfo: 12/6/2022 / 9:55:41 AM / SpaceObject 0 sorted
+LogInfo: 12/6/2022 / 9:55:42 AM / SpaceObject 1 sorted
+LogInfo: 12/6/2022 / 9:55:42 AM / SpaceObject 2 sorted
+LogInfo: 12/6/2022 / 9:55:43 AM / SpaceObject 3 sorted
+LogInfo: 12/6/2022 / 9:55:43 AM / Start AsyncSort Planet
+LogInfo: 12/6/2022 / 9:55:43 AM / Sort Planet by Field START
+LogInfo: 12/6/2022 / 9:55:43 AM / Planet 0 sorted
+LogInfo: 12/6/2022 / 9:55:43 AM / SpaceObject 4 sorted
+LogInfo: 12/6/2022 / 9:55:44 AM / SpaceObject 5 sorted
+LogInfo: 12/6/2022 / 9:55:44 AM / Planet 1 sorted
+LogInfo: 12/6/2022 / 9:55:44 AM / Sort SpaceObject by Field END
+LogInfo: 12/6/2022 / 9:55:44 AM / End AsyncSort SpaceObject
+LogInfo: 12/6/2022 / 9:55:45 AM / Planet 2 sorted
+LogInfo: 12/6/2022 / 9:55:46 AM / Planet 3 sorted
+LogInfo: 12/6/2022 / 9:55:47 AM / Planet 4 sorted
+LogInfo: 12/6/2022 / 9:55:48 AM / Planet 5 sorted
+LogInfo: 12/6/2022 / 9:55:49 AM / Planet 6 sorted
+LogInfo: 12/6/2022 / 9:55:50 AM / Planet 7 sorted
+LogInfo: 12/6/2022 / 9:55:51 AM / Planet 8 sorted
+LogInfo: 12/6/2022 / 9:55:52 AM / Planet 9 sorted
+LogInfo: 12/6/2022 / 9:55:53 AM / Planet 10 sorted
+LogInfo: 12/6/2022 / 9:55:54 AM / Sort Planet by Field END
+LogInfo: 12/6/2022 / 9:55:54 AM / End AsyncSort Planet
+LogInfo: 12/6/2022 / 9:58:18 AM / Program ended
